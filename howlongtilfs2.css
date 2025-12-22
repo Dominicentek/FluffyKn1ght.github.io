@@ -1,0 +1,50 @@
+@font-face {
+  font-family: "DTM-Mono";
+  src: url("./DTM-Mono.ttf");
+}
+
+@keyframes textpulse {
+  0% {
+    opacity: 100%;
+    filter: none;
+  }
+  100% {
+    opacity: 60%;
+    filter: blur(1px);
+  }
+}
+
+body {
+  margin: 32px;
+  background-color: #05050a;
+  color: white;
+  font-family: "DTM-Mono", monospace;
+}
+
+.centered {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-weight: normal;
+  margin-block: 0;
+  margin-bottom: 24px;
+  animation: textpulse 1s ease-in-out infinite alternate;
+  text-shadow: black 2px 2px;
+}
+
+#timer {
+  font-size: 48px;
+  animation: none;
+}
+
+audio {
+  display: none;
+}
+
+#plzclick {
+  color: yellow;
+  font-size: 24px;
+}
