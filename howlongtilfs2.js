@@ -7,13 +7,17 @@ function getTimeLeft() {
     var now = new Date().getTime()
 
     var dist = TARGET_TIME - now
+    if (dist > 0) {
 
-    var d = Math.floor(dist / (1000 * 60 * 60 * 24))
-    var h = Math.floor(dist % (1000 * 60 * 60 * 24) / (1000 * 60 * 60))
-    var m = Math.floor(dist % (1000 * 60 * 60) / (1000 * 60))
-    var s = Math.floor(dist % (1000 * 60) / 1000)
+      var d = Math.floor(dist / (1000 * 60 * 60 * 24))
+      var h = Math.floor(dist % (1000 * 60 * 60 * 24) / (1000 * 60 * 60))
+      var m = Math.floor(dist % (1000 * 60 * 60) / (1000 * 60))
+      var s = Math.floor(dist % (1000 * 60) / 1000)
 
-    return `${d} days, ${h}h ${m}m ${s}s`
+      return `${d} days, ${h}h ${m}m ${s}s`
+    } else {
+      return "S O O N"
+    }
 }
 
 function doTimer() {
